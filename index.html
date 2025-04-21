@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mystery Meal Game</title>
+    <link rel="shortcut icon" href="./Assets/Favicon.jpg" type="image/x-icon">
     <link rel="stylesheet" href="./style.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -12,8 +13,6 @@
         <header>
             <h1>Mystery Meal Game</h1>
         </header>
-
-        <!-- Start Screen -->
         <div id="start-screen" class="game-section active">
             <div class="game-card">
                 <h2>Welcome to Mystery Meal!</h2>
@@ -26,14 +25,10 @@
                 <button id="start-button" class="btn primary-btn">Start Game</button>
             </div>
         </div>
-
-        <!-- Loading Screen -->
         <div id="loading-screen" class="game-section">
             <div class="spinner"></div>
             <p>Preparing your mystery meal...</p>
         </div>
-
-        <!-- Game Screen -->
         <div id="game-screen" class="game-section">
             <div class="game-info">
                 <div class="round-info">
@@ -66,7 +61,6 @@
                         <div class="input-group">
                             <select id="guess-input" required>
                                 <option value="" disabled selected>Select your guess</option>
-                                <!-- Cuisine options -->
                                 <option value="American">American</option>
                                 <option value="British">British</option>
                                 <option value="Chinese">Chinese</option>
@@ -77,7 +71,6 @@
                                 <option value="Japanese">Japanese</option>
                                 <option value="Mexican">Mexican</option>
                                 <option value="Thai">Thai</option>
-                                <!-- Category options -->
                                 <option value="Beef">Beef</option>
                                 <option value="Breakfast">Breakfast</option>
                                 <option value="Chicken">Chicken</option>
@@ -94,7 +87,6 @@
             </div>
         </div>
 
-        <!-- Feedback Screen -->
         <div id="feedback-screen" class="game-section">
             <div class="feedback-card">
                 <div id="feedback-content"></div>
@@ -107,7 +99,6 @@
             </div>
         </div>
 
-        <!-- End Screen -->
         <div id="end-screen" class="game-section">
             <div class="end-card">
                 <h2>Game Over!</h2>

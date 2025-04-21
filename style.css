@@ -1,4 +1,3 @@
-/* Reset and Base Styles */
 * {
     margin: 0;
     padding: 0;
@@ -7,23 +6,22 @@
 
 body {
     font-family: 'Poppins', sans-serif;
-    background-color: #121212; /* Dark background */
-    color: #ffffff; /* White text */
+    background-color: #121212;
+    color: #ffffff;
     line-height: 1.6;
     display: flex;
     flex-direction: column;
-    min-height: 100vh; /* Full viewport height */
+    min-height: 100vh;
 }
 
 .container {
     width: 100%;
-    max-width: 800px; /* Control max width for better readability */
-    margin: 0 auto; /* Center horizontally */
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
-    flex: 1; /* Take up all available space */
+    flex: 1;
 }
 
-/* Header Styles */
 header {
     text-align: center;
     margin-bottom: 30px;
@@ -41,12 +39,11 @@ header h1 {
     font-weight: 700;
 }
 
-/* Game Section Styles */
 .game-section {
     display: none;
     padding: 20px;
     border-radius: 10px;
-    background-color: #1e1e1e; /* Dark card background */
+    background-color: #1e1e1e;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
     margin-bottom: 20px;
     width: 100%;
@@ -56,7 +53,6 @@ header h1 {
     display: block;
 }
 
-/* Start Screen */
 .game-card {
     text-align: center;
     padding: 40px;
@@ -65,7 +61,7 @@ header h1 {
 .game-card h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #ff7e5f; /* Orange accent color */
+    color: #ff7e5f;
 }
 
 .game-card p {
@@ -81,7 +77,6 @@ header h1 {
     list-style-position: inside;
 }
 
-/* Button Styles */
 .btn {
     display: inline-block;
     padding: 12px 24px;
@@ -95,7 +90,7 @@ header h1 {
 }
 
 .primary-btn {
-    background-color: #ff7e5f; /* Orange button */
+    background-color: #ff7e5f;
     color: white;
 }
 
@@ -105,7 +100,6 @@ header h1 {
     box-shadow: 0 4px 12px rgba(232, 106, 77, 0.3);
 }
 
-/* Loading Screen */
 #loading-screen {
     text-align: center;
     padding: 60px;
@@ -115,7 +109,7 @@ header h1 {
     width: 50px;
     height: 50px;
     border: 5px solid rgba(255, 126, 95, 0.2);
-    border-top: 5px solid #ff7e5f; /* Orange spinner */
+    border-top: 5px solid #ff7e5f;
     border-radius: 50%;
     margin: 0 auto 20px;
     animation: spin 1s linear infinite;
@@ -126,15 +120,14 @@ header h1 {
     100% { transform: rotate(360deg); }
 }
 
-/* Game Screen */
 .game-info {
     display: flex;
     justify-content: space-between;
     margin-bottom: 20px;
     padding: 10px 15px;
-    background-color: #2d2d2d; /* Darker background for contrast */
+    background-color: #2d2d2d;
     border-radius: 8px;
-    border-left: 4px solid #ff7e5f; /* Orange accent border */
+    border-left: 4px solid #ff7e5f;
 }
 
 .round-info {
@@ -168,14 +161,14 @@ header h1 {
 }
 
 .meal-details h3 {
-    color: #ff7e5f; /* Orange heading */
+    color: #ff7e5f;
     font-size: 1.5rem;
     margin-bottom: 10px;
 }
 
 .meal-ingredients h4, .meal-instructions h4 {
     margin-bottom: 10px;
-    color: #ff7e5f; /* Orange subheadings */
+    color: #ff7e5f;
 }
 
 #ingredients-list {
@@ -188,22 +181,21 @@ header h1 {
     max-height: 200px;
     overflow-y: auto;
     padding: 10px;
-    background-color: #2d2d2d; /* Darker background for contrast */
+    background-color: #2d2d2d;
     border-radius: 8px;
 }
 
-/* Guess Section */
 .guess-section {
     margin-top: 20px;
     padding: 20px;
-    background-color: #2d2d2d; /* Darker background for contrast */
+    background-color: #2d2d2d;
     border-radius: 8px;
     text-align: center;
 }
 
 .guess-section h3 {
     margin-bottom: 15px;
-    color: #ff7e5f; /* Orange heading */
+    color: #ff7e5f;
 }
 
 .input-group {
@@ -220,7 +212,6 @@ header h1 {
     color: white;
 }
 
-/* Feedback Screen */
 .feedback-card {
     text-align: center;
     padding: 30px;
@@ -234,13 +225,13 @@ header h1 {
 }
 
 .feedback-correct {
-    background-color: rgba(40, 167, 69, 0.2); /* Semi-transparent green */
+    background-color: rgba(40, 167, 69, 0.2);
     color: #28a745;
     border: 1px solid #28a745;
 }
 
 .feedback-incorrect {
-    background-color: rgba(220, 53, 69, 0.2); /* Semi-transparent red */
+    background-color: rgba(220, 53, 69, 0.2);
     color: #dc3545;
     border: 1px solid #dc3545;
 }
@@ -250,11 +241,10 @@ header h1 {
 }
 
 .meal-reveal h3 {
-    color: #ff7e5f; /* Orange heading */
+    color: #ff7e5f;
     margin-bottom: 10px;
 }
 
-/* End Screen */
 .end-card {
     text-align: center;
     padding: 40px;
@@ -263,14 +253,14 @@ header h1 {
 .end-card h2 {
     font-size: 2rem;
     margin-bottom: 20px;
-    color: #ff7e5f; /* Orange heading */
+    color: #ff7e5f;
 }
 
 .final-score {
     font-size: 1.5rem;
     margin-bottom: 30px;
     padding: 15px;
-    background-color: #2d2d2d; /* Darker background for contrast */
+    background-color: #2d2d2d;
     border-radius: 8px;
     display: inline-block;
 }
@@ -282,7 +272,7 @@ header h1 {
 
 .meal-summary h3 {
     margin-bottom: 15px;
-    color: #ff7e5f; /* Orange heading */
+    color: #ff7e5f;
     text-align: center;
 }
 
@@ -293,21 +283,20 @@ header h1 {
 #meals-summary-list li {
     margin-bottom: 10px;
     padding: 10px;
-    background-color: #2d2d2d; /* Darker background for contrast */
+    background-color: #2d2d2d;
     border-radius: 8px;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 20px;
-    background-color: #1a1a1a; /* Slightly lighter than body bg */
+    background-color: #1a1a1a;
     color: #fff;
     width: 100%;
 }
 
 footer a {
-    color: #ff7e5f; /* Orange links */
+    color: #ff7e5f;
     text-decoration: none;
 }
 
@@ -315,13 +304,11 @@ footer a:hover {
     text-decoration: underline;
 }
 
-/* Selection color */
 ::selection {
     background-color: #ff7e5f;
     color: white;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
     width: 8px;
 }
@@ -335,7 +322,6 @@ footer a:hover {
     border-radius: 4px;
 }
 
-/* Media Queries */
 @media (min-width: 768px) {
     .meal-card {
         flex-direction: row;
