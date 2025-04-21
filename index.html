@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mystery Meal Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Mystery Meal Game</h1>
+        </header>
+
+        <!-- Start Screen -->
+        <div id="start-screen" class="game-section active">
+            <div class="game-card">
+                <h2>Welcome to Mystery Meal!</h2>
+                <p>Test your culinary knowledge by guessing the cuisine or category of mystery meals!</p>
+                <ul>
+                    <li>You'll see an image, ingredients, and cooking instructions</li>
+                    <li>Guess whether it's Italian, Mexican, Dessert, Seafood, etc.</li>
+                    <li>Play 3 rounds and see your final score</li>
+                </ul>
+                <button id="start-button" class="btn primary-btn">Start Game</button>
+            </div>
+        </div>
+
+        <!-- Loading Screen -->
+        <div id="loading-screen" class="game-section">
+            <div class="spinner"></div>
+            <p>Preparing your mystery meal...</p>
+        </div>
+
+        <!-- Game Screen -->
+        <div id="game-screen" class="game-section">
+            <div class="game-info">
+                <div class="round-info">
+                    <p>Round: <span id="current-round">1</span>/3</p>
+                    <p>Score: <span id="current-score">0</span></p>
+                </div>
+            </div>
+
+            <div class="meal-card">
+                <div class="meal-image">
+                    <img id="meal-img" src="Assets/Mystery.jpg" alt="Mystery Meal">
+                </div>
+                <div class="meal-details">
+                    <h3>Mystery Meal</h3>
+                    
+                    <div class="meal-ingredients">
+                        <h4>Ingredients:</h4>
+                        <ul id="ingredients-list"></ul>
+                    </div>
+                    
+                    <div class="meal-instructions">
+                        <h4>Instructions:</h4>
+                        <div id="instructions-text" class="instructions-container"></div>
+                    </div>
+                </div>
+
+                <div class="guess-section">
+                    <h3>What type of cuisine or category is this?</h3>
+                    <form id="guess-form">
+                        <div class="input-group">
+                            <select id="guess-input" required>
+                                <option value="" disabled selected>Select your guess</option>
+                                <!-- Cuisine options -->
+                                <option value="American">American</option>
+                                <option value="British">British</option>
+                                <option value="Chinese">Chinese</option>
+                                <option value="French">French</option>
+                                <option value="Greek">Greek</option>
+                                <option value="Indian">Indian</option>
+                                <option value="Italian">Italian</option>
+                                <option value="Japanese">Japanese</option>
+                                <option value="Mexican">Mexican</option>
+                                <option value="Thai">Thai</option>
+                                <!-- Category options -->
+                                <option value="Beef">Beef</option>
+                                <option value="Breakfast">Breakfast</option>
+                                <option value="Chicken">Chicken</option>
+                                <option value="Dessert">Dessert</option>
+                                <option value="Pasta">Pasta</option>
+                                <option value="Seafood">Seafood</option>
+                                <option value="Side">Side</option>
+                                <option value="Vegetarian">Vegetarian</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Submit Guess</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <!-- Feedback Screen -->
+        <div id="feedback-screen" class="game-section">
+            <div class="feedback-card">
+                <div id="feedback-content"></div>
+                <div class="meal-reveal">
+                    <h3>The meal was: <span id="revealed-meal-name"></span></h3>
+                    <p>Cuisine: <span id="revealed-cuisine"></span></p>
+                    <p>Category: <span id="revealed-category"></span></p>
+                </div>
+                <button id="next-round-button" class="btn primary-btn">Next Round</button>
+            </div>
+        </div>
+
+        <!-- End Screen -->
+        <div id="end-screen" class="game-section">
+            <div class="end-card">
+                <h2>Game Over!</h2>
+                <div class="final-score">
+                    <p>Your final score: <span id="final-score">0</span>/3</p>
+                </div>
+                <div class="meal-summary">
+                    <h3>Meals Discovered:</h3>
+                    <ul id="meals-summary-list"></ul>
+                </div>
+                <button id="restart-button" class="btn primary-btn">Play Again</button>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>Mystery Meal Game | Powered by <a href="https://www.themealdb.com/api.php" target="_blank">TheMealDB API</a></p>
+    </footer>
+
+    <script src="./index.js"></script>
+</body>
+</html>
